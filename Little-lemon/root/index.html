@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="fabian-mardones">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Roboto+Serif:ital,wght@0,300;1,400;1,500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <img src="./img/Asset 16@4x.png" alt="">
+        <h3>Restaurant</h3>
+    </header>
+    <div class="nav-bg ">
+        <nav class="nav-principal container">
+            <a href="#">Menu</a>
+            <a href="#">Prices</a>
+            <a href="#">Reservations</a>
+            <a href="#">About us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <section class="hero">
+        <div>
+            <img src="./img/Asset 16@4x.png" alt="">
+        </div>
+        <div class="container-hero">
+            <h2 class="title">Restaurant</h2>
+        </div>
+    </section>
+    <div class="transition t-1">
+        <h3>Make an online reservation for 4 people and <strong>we'll give you a complimentary classic house wine.</strong></h3>
+    </div>
+    <main>
+        <section class="impart">
+            <div class="lema">
+                <h2>Visit Our Restaurant</h2>
+                <img src="./img/Asset 9@4x.png" alt="">
+            </div>
+            <form action="POST" class="shadows form-reserv">
+                <h3>Reservation</h3>
+                <div class="client-name">
+                    <label for="name-user">Name</label>
+                    <input type="text" name="name-user" id="name-user" required placeholder="name">
+                </div>
+                <div class="client-email">
+                    <label for="email-user">Email</label>
+                    <input type="email" name="email-user" id="email-user" required placeholder="email">
+                </div>
+                <div class="date-reservation">
+                    <label for="date-user">Date</label>
+                    <input type="date" name="date-user" id="date-user" required>
+                </div>
+                <div class="range-people">
+                    <label for="bookin-people">How many people?</label>
+                    <input type="range" name="bookin-people" id="bookin-people" min="1" max="10" value="2" oninput="this.nextElementSibling.value = this.value">
+                    <output>2</output>
+                </div>
+                <div class="button-form">
+                    <button type="submit">Booking</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <menu class="looking-for">
+                <div class="wine">
+                    <a href="#"><img src="./img/1301475-578525-35 1.png" alt="image wine"></a>
+                    <h2>Our Wines</h2>
+                </div>
+                <div class="food">
+                    <a href=""><img src="./img/donde-comer-en-sevilla-1280x400 1.png" alt="image food"></a>
+                    <h2>Our Food</h2>
+                </div>
+            </menu>
+        </section>
+        <section>
+            <div class="map">
+                <img src="./img/Captura de pantalla 2023-06-06 235203.png" alt="image map">
+            </div>
+            <div class="transition t-2">
+                <h3>Find us in google maps <strong>San Francisco, California</strong></h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a href="#">Menu</a>
+            <a href="#">Prices</a>
+            <a href="#">Reservations</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div>
+            <img src="./img/Asset 14@4x.png" alt="">
+        </div>
+        <div>
+            <h3>Suscibe to our newsletter 15% OFF</h3>
+            <form action="POST">
+                <label for="email-newsletter">Email</label>
+                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="email">
+            </form>
+        </div>
+    </footer>
+</body>
+</html>
