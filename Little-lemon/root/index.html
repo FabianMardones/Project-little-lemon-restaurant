@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <img src="./img/Asset 16@4x.png" alt="">
+    <header class="logo">
+        <img src="./img/Asset 16@4x.png" alt="" class="logo-little-lemon">
         <h3>Restaurant</h3>
     </header>
     <div class="nav-bg ">
@@ -80,7 +80,14 @@
         </section>
         <section>
             <div class="map">
-                <img src="./img/Captura de pantalla 2023-06-06 235203.png" alt="image map">
+                <div class="container-map">
+                <a href=""><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="76" height="76" viewBox="0 0 24 24" stroke-width="2" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                    </svg></a>
+                    <h3>498-400 Clayton St, San Francisco, California</h3>
+                </div>
             </div>
             <div class="transition t-2">
                 <h3>Find us in google maps <strong>San Francisco, California</strong></h3>
@@ -88,21 +95,22 @@
         </section>
     </main>
     <footer>
-        <div>
+        <div class="logo">
+            <img src="./img/Asset 14@4x.png" alt=""logo-little-lemon>
+        </div>
+        <nav class="nav-footer">
             <a href="#">Menu</a>
             <a href="#">Prices</a>
             <a href="#">Reservations</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
-        </div>
-        <div>
-            <img src="./img/Asset 14@4x.png" alt="">
-        </div>
+        </nav>
         <div>
             <h3>Suscibe to our newsletter 15% OFF</h3>
-            <form action="POST">
+            <form action="POST" class="form-footer">
                 <label for="email-newsletter">Email</label>
                 <input type="email" name="email-newsletter" id="email-newsletter" placeholder="email">
+                <button type="submit">Send</button>
             </form>
         </div>
     </footer>

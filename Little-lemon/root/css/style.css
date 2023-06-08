@@ -34,14 +34,21 @@ body{
     font-family: 'Fasthand', cursive;
 }
 
-header {
+.logo{
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 1rem;
     margin-right: 7rem;
 }
-header img{
+
+@media (min-width: 780px){
+    .logo{
+        display: none;
+    }
+}
+
+.logo img{
     height: 8rem;
     max-width: 30rem;
     margin-left: 8rem;
@@ -220,52 +227,62 @@ form > h3{
 }
 
 
-.looking-for{
+
+.map{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.map{
+    background-image: url(../img/Captura\ de\ pantalla\ 2023-06-06\ 235203.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+}
+
+.container-map{
+    position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--footer);
-    padding: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-    height: 52rem;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
 }
 
-.wine img{
-    height: 20rem;
-    max-width: 100rem;
-}
-.food img{
-    height: 21rem;
-    max-width: 100rem;
-}
-
-.wine h2{
-    font-family: 'Fasthand', cursive;
-    font-size: 3rem;
-    margin-left: 26rem;
-    margin-top: -6rem;
+.container-map h3{
     color: var(--white);
 }
 
-.food h2{
-    font-family: 'Fasthand', cursive;
-    font-size: 3rem;
-    margin-left: 15rem;
-    margin-top: -16rem;
-    color: var(--footer);
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    height: 20rem;
+    width: 20rem;
+}
+.nav-footer a{
+    margin: 2rem;
+    text-decoration: none;
 }
 
-@media (min-width : 600px) {
-    .looking-for{
-        display: flex;
-        justify-content: center;
-        background-color: var(--footer);
-        padding: 8rem;
-        margin-top: 0rem;
-        margin-bottom: 0rem;
-    }
-}
+
+
+
+
+
+
+
+
 
 
 /*.wine{
