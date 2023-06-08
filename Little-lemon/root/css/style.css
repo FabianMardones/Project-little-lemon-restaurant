@@ -53,7 +53,7 @@ body{
     max-width: 30rem;
     margin-left: 8rem;
 }
-header h3{
+.logo h3{
     font-family: 'Fasthand', cursive;
     font-size: 3rem;
     margin-left: 35rem;
@@ -193,6 +193,7 @@ header h3{
 form{
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
 }
 form > h3{
     font-family: 'Fasthand', cursive;
@@ -201,6 +202,13 @@ form > h3{
     font-style: italic;
     font-weight: 100;
 }
+
+@media (min-width : 780px) {
+    form{
+        margin-bottom: 0;
+    }
+}
+
 
 .client-name,.client-email,.date-reservation,.range-people,.button-form{
     margin: 0.5rem auto;
@@ -214,7 +222,7 @@ form > h3{
     border-radius: 0.8rem;
 }
 .button-form button{
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     padding: 1rem 1.5rem;
 }
 
@@ -226,7 +234,102 @@ form > h3{
     cursor: pointer;
 }
 
+menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 65rem;
+    padding: 3rem;
+    background-color: var(--footer);
+}
 
+#card{
+    height: 20rem;
+    width: 35rem;
+    border-radius: 1rem;
+}
+
+menu a:hover{
+    background-color: #C7B300;
+}
+menu .card h2{
+    text-align: center;
+    font-family: 'Fasthand', cursive;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+@media (min-width : 600px) {
+    menu{
+        height: 80rem;
+    }
+    #card{
+        height: 25rem;
+        width: 45rem;
+    }
+}
+@media (min-width : 780px) {
+    menu{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 35rem;
+    }
+    #card{
+        height: 20rem;
+        width: 35rem;
+    }
+    .card h2{
+        margin: 1rem;
+    }
+}
+@media (min-width :900px) {
+    menu{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 35rem;
+    }
+    #card{
+        height: 25rem;
+        width: 40rem;
+    }
+    .card{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width : 1040px) {
+    menu{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 42rem;
+    }
+    #card{
+        height: 30rem;
+        width: 50rem;
+    }
+    .card{
+        margin: 2rem 1rem;
+    }
+}
+@media (min-width : 1440px) {
+    menu{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 45rem;
+    }
+    #card{
+        height: 35rem;
+        width: 65rem;
+    }
+    .card{
+        margin: 1rem 1rem;
+    }
+}
 
 .map{
     display: flex;
@@ -261,19 +364,76 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    background-color: var(--footer);
 }
 .nav-footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items:flex-start;
+    margin-right: 5rem;
     height: 20rem;
     width: 20rem;
+
 }
 .nav-footer a{
     margin: 2rem;
     text-decoration: none;
+    color: var(--white);
+    font-weight: 900;
 }
+
+.newsletter{
+    text-align: center;
+    color: var(--white);
+}
+
+.form-footer{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+.form-footer label{
+    margin: 0.5rem;
+    font-weight: 700;
+}
+
+.form-footer input{
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 25rem;
+}
+
+.logo-footer{
+    -webkit-filter: invert(1) hue-rotate(180deg) contrast(2);
+	filter: invert(1) hue-rotate(180deg) contrast(7);
+}
+
+.copy-right{
+    color: var(--white);
+}
+.social-media{
+    height: 10rem;
+}
+.social-media svg{
+    height: 3rem;
+    margin: 2rem;
+}
+
+@media (min-width : 780px) {
+    footer{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .copy-right{
+        display: none;
+    }
+}
+
 
 
 
