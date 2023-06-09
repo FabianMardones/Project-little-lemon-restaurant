@@ -1,3 +1,5 @@
+/*Firstly, I created universal selectors to make my code more organized and to use what will be most useful to me, such as a color palette and some pre-defined formats.*/
+
 :root {
     --navhead: #5D561B;
     --greyhero: #AAAAAA;
@@ -27,6 +29,11 @@ body{
     padding: 2rem;
     border-radius: 1rem;
 }
+
+
+
+/*First of all, starting with the header, where the logo is included in a way that emphasizes the mobile-first approach initially, and then, as the screen size increases, it is hidden to display a different layout and make it responsive.*/
+
 
 .title {
     text-align: center;
@@ -59,6 +66,10 @@ body{
     margin-left: 35rem;
     margin-top: -2rem;
 }
+
+
+/*Then, I started working with the navigation bar, assigning different classes to it in order to manipulate both parent and child elements independently.*/
+
 
 .container{
     max-width: 120rem;
@@ -96,6 +107,11 @@ body{
     background-color: var(--goldlight);
     color: var(--navhead);
 }
+
+
+/*Afterwards, I decided to call the next section "hero," where the main logo of the restaurant "Little Lemon" is located. I tried to give it a different touch by using a different font style for the word "restaurant," and I think it looks great.*/
+
+
 
 .hero {
     display: none;
@@ -138,6 +154,82 @@ body{
     }
 }
 
+
+
+/*
+Then, I created a content transition with a promotion offered by the restaurant. I decided to add keyframes for the transition, and it's in Spanish since I am a Spanish speaker and it was easier for me to apply it that way. I also added multiple media queries to ensure that the transitions wouldn't cause any overflow on the screen in different screen sizes.*/
+
+
+.t-1 h3{
+    animation: mover-izquierda-derecha 5s infinite;
+    animation-fill-mode:forwards;
+}
+@keyframes mover-izquierda-derecha{
+    from{
+        transform: translateX(-15px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@media (min-width:700px){
+    .t-1 h3{
+        animation: mover-izquierda-derecha 10s infinite;
+        animation-fill-mode:forwards;
+    }
+    @keyframes mover-izquierda-derecha{
+        from{
+            transform: translateX(-20px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+}
+@media (min-width: 800px){
+    .t-1 h3{
+        animation: mover-izquierda-derecha 5s infinite;
+        animation-fill-mode:forwards;
+    }
+    @keyframes mover-izquierda-derecha{
+        from{
+            transform: translateX(-20px);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+}
+@media (min-width: 900px){
+    .t-1 h3{
+        animation: mover-izquierda-derecha 5s infinite;
+        animation-fill-mode:forwards;
+    }
+    @keyframes mover-izquierda-derecha{
+        from{
+            transform: translateX(-20px);
+        }
+        to{
+            transform: translateX(1px);
+        }
+    }
+}
+@media (min-width: 1000px){
+    .t-1 h3{
+        animation: mover-izquierda-derecha 10s infinite;
+        animation-fill-mode:forwards;
+    }
+    @keyframes mover-izquierda-derecha{
+        from{
+            transform: translateX(-100px);
+        }
+        to{
+            transform: translateX(100px);
+        }
+    }
+}
+
 .transition{
     display: flex;
     justify-content: center;
@@ -150,6 +242,13 @@ body{
 .t-1 strong{
     font-weight: 700;
 }
+
+
+
+/*Then, I named the next section with the class ".impart" which stands for "important part" since it is the key area of the page where we will receive customer reservations, leading to increased business traffic.*/
+
+
+
 
 .impart{
     display: flex;
@@ -222,7 +321,7 @@ form > h3{
     border-radius: 0.8rem;
 }
 .button-form button{
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     padding: 1rem 1.5rem;
 }
 
@@ -233,6 +332,14 @@ form > h3{
     font-style: italic;
     cursor: pointer;
 }
+
+
+
+
+/*Furthermore, I used media queries once again to adapt the menu. I focused primarily on the food and beverages section. Although they do not lead anywhere since it's just HTML and CSS and a project without much complexity, I took the liberty to highlight and showcase the main offerings, while also including the wine promotion.*/
+
+
+
 
 menu{
     display: flex;
@@ -250,8 +357,14 @@ menu{
     border-radius: 1rem;
 }
 
+#card:hover{
+    transform: rotateX(20deg);
+    transition: 2s;
+}
+
 menu a:hover{
     background-color: #C7B300;
+    border-radius: 1rem;
 }
 menu .card h2{
     text-align: center;
@@ -331,6 +444,16 @@ menu .card h2{
     }
 }
 
+
+
+
+
+/*Additionally, I included a Google Maps embed of the city of San Francisco. I'm not familiar with the exact location, but I tried to display it in a way that makes it easy for customers to find with just one click. I placed the embed code in CSS rather than in the HTML document to achieve the desired shadow effect.*/
+
+
+
+
+
 .map{
     display: flex;
     justify-content: center;
@@ -359,6 +482,12 @@ menu .card h2{
 .container-map h3{
     color: var(--white);
 }
+
+
+
+/*Lastly, in the footer, I used flexbox to manipulate the elements as desired. I also implemented show/hide functionality to achieve different visualizations in different screen sizes. It's worth mentioning that I didn't use standard measurements since I learned that, as I continue learning, I should strive to make things look their best. I'm not a professional, and it might be evident in my code, but I've learned that there are many ways to achieve the desired outcome.*/
+
+
 
 footer {
     display: flex;
@@ -420,36 +549,91 @@ footer {
     height: 3rem;
     margin: 2rem;
 }
+.copy-right2{
+    display: none;
+}
+.active{
+    display: flex;
+}
 
-@media (min-width : 780px) {
+@media (min-width : 920px){
     footer{
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 40rem;
     }
-
     .copy-right{
         display: none;
     }
+    .copy-right2{
+        display: flex;
+        margin-left: 7rem;
+    }
+    .nav-footer{
+        margin-right: 17rem;
+    }
+    .newsletter{
+        margin-right: 10rem;
+    }
+
+}
+
+@media (min-width : 1140px) {
+    footer{
+        height: 24rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .form-footer { 
+        align-items: center;
+    }
+    .form-footer input{
+        border-radius: 1rem;
+        height: 4rem;
+    }
+    .form-footer .last-button{
+        padding: 0.9rem;
+        margin-left: 0.8rem;
+        border-radius: 1rem;
+    }
+    .last-button:hover{
+        background-color: var(--between);
+        color: var(--navhead);
+        font-weight: 900;
+    }
+    .copy-right{
+        display: none;
+    }
+    .copy-right2{
+        display: flex;
+        margin-left: 7rem;
+        margin-top: 5rem;
+    }
+    .social-media{
+        margin-left: -5rem;
+    }
+    .active{
+        display: flex;
+        margin-top: 0.5rem;
+        margin-left: -10rem;
+    }
+    .nav-footer{
+        margin-right: 2rem;
+    }
+    .newsletter{
+        margin-right: 2rem;
+    }
 }
 
 
 
+/*That's it*/
 
 
-
-
-
-
-
-
-
-/*.wine{
-    width: 30rem;
-}
-.food{
-    width: 30rem;
-} */    
+/*God bless all of you, Fabián Mardones, Chile*/
 
 
