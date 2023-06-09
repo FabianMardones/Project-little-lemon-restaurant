@@ -445,7 +445,45 @@ menu .card h2{
 }
 
 
+.about-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 65rem;
+}
 
+.title-about-us{
+    font-family: 'Fasthand', cursive;
+    font-size: 5rem;
+    margin-top: 0rem;
+}
+
+.text-about-us{
+    text-align: center;
+
+}
+
+@media (min-width: 780px){
+    .about-us{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: var(--greyhero);
+        height: 50rem;
+    }
+    .title-about-us{
+        text-align: center;
+        font-size: 10rem;
+        width: 100rem;
+    }
+    .text-about-us{
+        text-align: start;
+        font-size: 1.8rem;
+        width: 80rem;
+        font-style: italic;
+    }
+}
 
 
 /*Additionally, I included a Google Maps embed of the city of San Francisco. I'm not familiar with the exact location, but I tried to display it in a way that makes it easy for customers to find with just one click. I placed the embed code in CSS rather than in the HTML document to achieve the desired shadow effect.*/
