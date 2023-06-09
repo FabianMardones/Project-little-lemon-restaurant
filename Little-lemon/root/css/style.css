@@ -359,7 +359,7 @@ menu{
 
 #card:hover{
     transform: rotateX(20deg);
-    transition: 2s;
+    transition: 1s;
 }
 
 menu a:hover{
@@ -461,7 +461,6 @@ menu .card h2{
 
 .text-about-us{
     text-align: center;
-
 }
 
 @media (min-width: 780px){
@@ -482,6 +481,7 @@ menu .card h2{
         font-size: 1.8rem;
         width: 80rem;
         font-style: italic;
+        margin-right: 10rem;
     }
 }
 
